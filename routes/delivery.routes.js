@@ -1,6 +1,6 @@
 const express = require('express');
+const { DeliveryVehicle } = require('../models/DeliveryVehicle');
 const router = express.Router();
-const DeliveryVehicle = require('../models/DeliveryVehicle');
 
 // Create a new delivery vehicle
 router.post('/vehicles', async (req, res) => {

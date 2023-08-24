@@ -1,11 +1,11 @@
 const express = require('express');
+const { Item } = require('../models/Item');
+const { Customer } = require('../models/Customer');
+const { DeliveryVehicle } = require('../models/DeliveryVehicle');
+const { Order } = require('../models/Order');
 const router = express.Router();
-const Order = require('../models/Order');
-const Customer = require('../models/Customer');
-const DeliveryVehicle = require('../models/DeliveryVehicle');
-const Item = require('../models/Item');
 
-// POST /api/orders
+
 router.post('/orders', async (req, res) => {
   try {
     const { itemId, customerId } = req.body;
